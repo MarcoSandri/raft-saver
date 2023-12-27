@@ -33,6 +33,7 @@ function createZip(callback) {
   const output = fs.createWriteStream(zipFilePath);
   output.on('close', function () {
     console.log('Zip completato con successo.');
+    require('child_process').exec('start "" "'+ sourceFolderPath +'"');
     callback();
   });
   archive.on('error', function (err) {
