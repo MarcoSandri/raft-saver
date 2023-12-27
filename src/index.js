@@ -17,9 +17,9 @@ const client = new Client({
 
 
 const sourceFolderPath = 'C:\\Users\\'+ process.env.USER +'\\AppData\\LocalLow\\Redbeet Interactive\\Raft\\User\\'+ process.env.STEAM_USER + '\\World';
-const sourceFolderName = 'fuocone';
+const sourceFolderName = process.env.WORLDNAME;
 const destinationFolderPath = './world_zip';
-const zipFileName = 'fuocone.zip';
+const zipFileName = process.env.WORLDNAME + '.zip';
 
 
 function createZip(callback) {
